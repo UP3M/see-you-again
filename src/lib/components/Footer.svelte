@@ -18,7 +18,6 @@
 				<img src="/icons/phone.svg" alt="Phone Icon" />
 				<p>+7 939 731-79-93</p>
 			</div>
-			
 		</div>
 		<div class="flex flex-col space-y-6 w-1/2">
 			<h6 class="font-heading font-semibold">Get in touch</h6>
@@ -44,4 +43,3 @@
 <div class="border-t-[1px] border-neutral-300 text-center py-4">
 	<p>©2023 See You Again Corp, All rights reserved</p>
 </div>
-
