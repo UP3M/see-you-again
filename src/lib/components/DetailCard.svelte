@@ -5,6 +5,12 @@
 	export let id: string;
 </script>
 
+<svelte:head>
+	<title>Detail of {post_final.title}</title>
+	<meta name="description" content="{post_final.location}, price:{post_final.price}" />
+	<html lang="en" />
+</svelte:head>
+
 <div class="font-sans text-gray-900">
 	<main class="pt-10 pb-12 pl-20">
 		<button class="font-bold"><a href="/Workspace">&larr; Back</a> </button>

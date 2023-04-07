@@ -47,7 +47,7 @@
 <!-- Hero Section Content -->
 <div class="flex-1 flex items-center">
     <div class="text-center mx-auto">
-    <h1 class="text-6xl font-semibold">Welcome to See You Again</h1>
+    <h1 class="text-6xl font-semibold">See You Again</h1>
 	<button class="mt-10 w-1/3 primary"><a href="/Workspace">Start Find Workspace</a></button>
 	<button class="mx-10 w-1/3 outline bg-black"><a href="mailto:m.wedamerta@innopolis.university">Contact Us</button>
     </div>
@@ -61,7 +61,7 @@
 				<div class="flex flex-col space-y-4">
 					<h2 class="text-5xl font-bold font-heading">Start and Expand your company with Us</h2>
 					<p class="text-justify">
-						The See You Again ecosystem is designed to help you to start and grow your bussiness. Set up a perfect workspace and
+						The See You Again ecosystem is designed to help you to start and grow your business. Set up a perfect workspace and
 						get the best recomendation to expand your company with See You Again.
 					</p>
 				</div>

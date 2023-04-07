@@ -1,6 +1,7 @@
 <svelte:head>
 	<title>About</title>
-	<meta name="robots" content="noindex nofollow" />
+  <meta name="description" content="Everything you need to know about us"/>
+	<meta name="robots" content="" />
 	<html lang="en" />
 </svelte:head>
 <section id="detail">

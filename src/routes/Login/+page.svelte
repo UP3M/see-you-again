@@ -41,7 +41,8 @@
 
 <svelte:head>
 	<title>Login</title>
-	<meta name="robots" content="noindex nofollow" />
+	<meta name="description" content="Login for admin"/>
+	<meta name="robots" content="" />
 	<html lang="en" />
 </svelte:head>
 

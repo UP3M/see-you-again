@@ -4,7 +4,8 @@
 
 <svelte:head>
 	<title>Find Your Dream Workspace</title>
-	<meta name="robots" content="noindex nofollow" />
+    <meta name="description" content="We have the best workspace around the world" />
+	<meta name="robots" content="" />
 	<html lang="en" />
 </svelte:head>
 <section
