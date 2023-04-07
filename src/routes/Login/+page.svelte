@@ -16,8 +16,8 @@
 	let password = '';
 	let user: User | null;
 
-	let errorMessage:string|null;
-	let errorCode:string|null;
+	let errorMessage: string | null;
+	let errorCode: string | null;
 
 	const app = initializeApp(firebaseConfig);
 
@@ -90,9 +90,11 @@
 				class="border-2 border-indigo-700 bg-indigo-700 text-white py-1 w-full rounded-md hover:bg-transparent hover:text-indigo-700 font-semibold"
 				><i class="fa-solid fa-right-to-bracket" />&nbsp;&nbsp;Login</button
 			>
-			{#if errorMessage!== null}
-				<p class="text-brightRed font-bold text-center" transition:fade={{ duration: 150 }}>Email or Password incorrect</p>
-			{/if}
 		</div>
+		{#if errorMessage !== null}
+			<h2 class="text-brightRed font-bold text-center" transition:fade={{ duration: 150 }}>
+				Email or Password incorrect
+			</h2>
+		{/if}f
 	</div>
 </div>
