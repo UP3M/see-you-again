@@ -35,7 +35,6 @@
 <svelte:head>
 	<title>Create</title>
 	<meta name="description" content="Create a post for workspace" />
-	<meta name="robots" content="noindex nofollow" />
 	<html lang="en" />
 </svelte:head>
 

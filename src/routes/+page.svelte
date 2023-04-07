@@ -37,7 +37,7 @@
 
 <svelte:head>
 	<title>See You Again</title>
-	<meta name="robots" content="noindex nofollow" />
+	<meta name="robots" content="" />
 	<html lang="en" />
 </svelte:head>
 

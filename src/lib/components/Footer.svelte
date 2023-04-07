@@ -9,7 +9,7 @@
 			</div>
 		</div>
 		<div class="flex flex-col space-y-6 w-1/4">
-			<h1 class="font-semibold font-heading">Contact Info</h1>
+			<h2 class="font-semibold font-heading">Contact Info</h2>
 			<div class="flex items-start space-x-2">
 				<img src="/icons/location.svg" alt="Location Icon" />
 				<p>1, Universitetskaya Str., Innopolis, 420500, Russia</p>
