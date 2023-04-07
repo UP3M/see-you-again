@@ -95,6 +95,6 @@
 			<h2 class="text-brightRed font-bold text-center" transition:fade={{ duration: 150 }}>
 				Email or Password incorrect
 			</h2>
-		{/if}f
+		{/if}
 	</div>
 </div>
