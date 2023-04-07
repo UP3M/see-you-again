@@ -9,7 +9,7 @@
 			</div>
 		</div>
 		<div class="flex flex-col space-y-6 w-1/4">
-			<h6 class="font-semibold font-heading">Contact Info</h6>
+			<h1 class="font-semibold font-heading">Contact Info</h1>
 			<div class="flex items-start space-x-2">
 				<img src="/icons/location.svg" alt="Location Icon" />
 				<p>1, Universitetskaya Str., Innopolis, 420500, Russia</p>
@@ -20,7 +20,7 @@
 			</div>
 		</div>
 		<div class="flex flex-col space-y-6 w-1/2">
-			<h6 class="font-heading font-semibold">Get in touch</h6>
+			<h2 class="font-heading font-semibold">Get in touch</h2>
 			<div class="flex items-center space-x-2">
 				<img src="/icons/email-blue.svg" alt="Email Icon" />
 				<p>m.wedamerta@innopolis.university</p>

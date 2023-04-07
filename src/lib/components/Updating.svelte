@@ -127,9 +127,9 @@
 		{#if hasError == true}
 			<p class="error-alert">{errMessage}</p>
 		{:else if isSuccessVisible}
-			<h1 class="text-3xl block text-center font-semibold" transition:fade={{ duration: 150 }}>
+			<h2 class="text-3xl block text-center font-semibold" transition:fade={{ duration: 150 }}>
 				<i class="fa-solid fa-user" />Data updated successfully !
-			</h1>
+			</h2>
 		{/if}
 	</div>
 </div>

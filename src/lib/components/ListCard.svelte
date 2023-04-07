@@ -16,8 +16,8 @@
 				alt={post.title}
 			/>
 			<div class="p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
+                <h1 class="text-2xl font-semibold mb-3">{post.title}</h1>
 				<h2 class="text-base font-medium text-indigo-300 mb-1">₽ {post.price}</h2>
-				<h1 class="text-2xl font-semibold mb-3">{post.title}</h1>
 				<p class="leading-relaxed mb-3">{post.location}</p>
 			</div>
 		</div>

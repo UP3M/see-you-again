@@ -2,7 +2,7 @@
 	import { push, ref, set } from 'firebase/database';
 	import { db } from '$lib/scripts/firestore';
 	import { Post } from '$lib/models/post';
-	import { fly, fade } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	let hasError = false;
 	let isSuccessVisible = false;
 	let submitted = false;
@@ -21,6 +21,12 @@
 
 	let post = new Post('', 1, '', '', false, '', null, '');
 </script>
+
+<svelte:head>
+	<title>Create</title>
+	<meta name="robots" content="noindex nofollow" />
+	<html lang="en" />
+</svelte:head>
 
 <div
 	class="flex justify-center items-center bg-center bg-cover bg-blend-overlay bg-fixed bg-black/60"
@@ -110,9 +116,9 @@
 		{#if hasError == true}
 			<p class="error-alert">{errMessage}</p>
 		{:else if isSuccessVisible}
-			<h1 class="text-3xl block text-center font-semibold" transition:fade={{ duration: 150 }}>
+			<h2 class="text-3xl block text-center font-semibold" transition:fade={{ duration: 150 }}>
 				<i class="fa-solid fa-user" />Data uploaded successfully !
-			</h1>
+			</h2>
 		{/if}
 	</div>
 </div>

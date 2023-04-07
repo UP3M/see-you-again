@@ -1,5 +1,8 @@
-<!-- Hero Section -->
-
+<svelte:head>
+	<title>About</title>
+	<meta name="robots" content="noindex nofollow" />
+	<html lang="en" />
+</svelte:head>
 <section id="detail">
 	<!-- Flex Container -->
 	<div
@@ -32,7 +35,7 @@
 			>
 				<div class="flex-1 flex items-center bg-gradient-to-r from-black">
 					<div class="text-center mx-auto">
-						<h1 class="text-6xl font-semibold">About Us</h1>
+						<h2 class="text-6xl font-semibold">About Us</h2>
 						<p class="font-light text-3xl mt-5">we exist because of care</p>
 					</div>
 				</div>
@@ -130,7 +133,7 @@
 			<!-- Team member 1 -->
 			<div class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-LightGray md:w-1/2">
 				<img src="../images/me2.jpg" class="h-40 w-40 -mt-14 rounded-full" alt="" />
-				<h5 class="text-lg font-bold">Made Oka Resia Wedamerta</h5>
+				<h3 class="text-lg font-bold">Made Oka Resia Wedamerta</h3>
 				<p class="text-sm text-darkGrayishBlue">“Innopolis University student”</p>
 			</div>
 
@@ -139,7 +142,7 @@
 				class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-LightGray md:flex md:w-1/2"
 			>
 				<img src="../images/vova.jpg" class="h-40 w-40 -mt-14 rounded-full" alt="" />
-				<h5 class="text-lg font-bold">Vladimir Zelenokor</h5>
+				<h3 class="text-lg font-bold">Vladimir Zelenokor</h3>
 				<p class="text-sm text-darkGrayishBlue">
 					Brother of Justin Beiber<br />
 					Single (if you are girl and single feel free to contact me https://t.me/VZ2002)

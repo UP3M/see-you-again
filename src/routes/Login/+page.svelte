@@ -39,6 +39,12 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Login</title>
+	<meta name="robots" content="noindex nofollow" />
+	<html lang="en" />
+</svelte:head>
+
 <div
 	class="flex justify-center items-center h-screen bg-center bg-cover bg-blend-overlay bg-fixed bg-black/60"
 	style="background-image: url(https://png.pngtree.com/back_origin_pic/04/48/50/84cd2a9fbc6cbd5522b2f048a56703a8.jpg);"
