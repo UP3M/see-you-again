@@ -18,6 +18,7 @@
 
 	let errorMessage: string | null;
 	let errorCode: string | null;
+	let check:boolean = true;
 
 	const app = initializeApp(firebaseConfig);
 
@@ -26,6 +27,7 @@
 		signInWithEmailAndPassword(auth, email, password)
 			.then((userCredential) => {
 				// Signed in
+				check = true;
 				authStore.set({
 					isLoggedIn: userCredential !== null,
 					firebaseController: true
@@ -35,6 +37,7 @@
 			.catch((error) => {
 				errorCode = error.code;
 				errorMessage = error.message;
+				check = false;
 				console.log(errorCode, errorMessage);
 			});
 	};
@@ -91,9 +94,9 @@
 				><i class="fa-solid fa-right-to-bracket" />&nbsp;&nbsp;Login</button
 			>
 		</div>
-		{#if errorMessage !== null}
+		{#if !check}
 			<h2 class="text-brightRed font-bold text-center" transition:fade={{ duration: 150 }}>
-				Email or Password incorrect
+				<i class="fa-solid fa-user" />Email or Password incorrect
 			</h2>
 		{/if}
 	</div>
