@@ -144,8 +144,7 @@
 				<img src="../images/vova.jpg" class="h-40 w-40 -mt-14 rounded-full" alt="" />
 				<h3 class="text-lg font-bold">Vladimir Zelenokor</h3>
 				<p class="text-sm text-darkGrayishBlue">
-					Brother of Justin Beiber<br />
-					Single (if you are girl and single feel free to contact me https://t.me/VZ2002)
+					"Innopolis University student"
 				</p>
 			</div>
 		</div>
