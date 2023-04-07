@@ -4,8 +4,8 @@
 			<img src="/logo.png" width={200} height={100} alt="Screeno Logo" />
 			<p>our social media</p>
 			<div class="flex space-x-4">
-				<img src="/icons/facebook.svg" alt="Facebook" />
-				<img src="/icons/instagram.svg" alt="Instagram" />
+				<a href="https://t.me/okaresia"><img src="/icons/telegram.png" alt="Telegram"/></a>
+				<a href="https://github.com/UP3M/see-you-again"><img src="/icons/github.svg" alt="Github" /></a>
 			</div>
 		</div>
 		<div class="flex flex-col space-y-6 w-1/4">

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { push, ref} from 'firebase/database';
+	import { push, ref } from 'firebase/database';
 	import { db } from '$lib/scripts/firestore';
 	import { Post } from '$lib/models/post';
 	import { fade } from 'svelte/transition';

@@ -10,10 +10,14 @@
 	import { firebaseConfig } from '$lib/scripts/config.js';
 	import { goto } from '$app/navigation';
 	import authStore from '../stores/authStore';
+	import { fade } from 'svelte/transition';
 
 	let email = '';
 	let password = '';
 	let user: User | null;
+
+	let errorMessage:string|null;
+	let errorCode:string|null;
 
 	const app = initializeApp(firebaseConfig);
 
@@ -25,12 +29,12 @@
 				authStore.set({
 					isLoggedIn: userCredential !== null,
 					firebaseController: true
-      })
+				});
 				goto('/Create');
 			})
 			.catch((error) => {
-				const errorCode = error.code;
-				const errorMessage = error.message;
+				errorCode = error.code;
+				errorMessage = error.message;
 				console.log(errorCode, errorMessage);
 			});
 	};
@@ -46,7 +50,7 @@
 
 <svelte:head>
 	<title>Login</title>
-	<meta name="description" content="Login for admin"/>
+	<meta name="description" content="Login for admin" />
 	<html lang="en" />
 </svelte:head>
 
@@ -86,6 +90,9 @@
 				class="border-2 border-indigo-700 bg-indigo-700 text-white py-1 w-full rounded-md hover:bg-transparent hover:text-indigo-700 font-semibold"
 				><i class="fa-solid fa-right-to-bracket" />&nbsp;&nbsp;Login</button
 			>
+			{#if errorMessage!== null}
+				<p class="text-brightRed font-bold text-center" transition:fade={{ duration: 150 }}>Email or Password incorrect</p>
+			{/if}
 		</div>
 	</div>
 </div>

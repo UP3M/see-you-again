@@ -1,13 +1,13 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import authStore from '../../routes/stores/authStore';
-	let controller: string;
-	authStore.subscribe(async ({ firebaseController }) => {
-		if (firebaseController) {
-			controller = 'Logout';
-		} else {
-			controller = 'Login';
-		}
-	});
+	async function logout() {
+		authStore.set({
+					isLoggedIn: false,
+					firebaseController: false
+				});
+		goto ('/#')
+	}
 </script>
 
 <nav
@@ -22,6 +22,11 @@
 				<a href="/About">About</a>
 			</div>
 		</div>
-		<button class="font-bold px-10"><a href="/Login">{controller}</a></button>
+		{#if $authStore.isLoggedIn}
+			<button class="font-bold px-10" on:click={logout}>Logout</button>
+		{:else}
+			<button class="font-bold px-10"><a href="/Login">Login</a></button>
+		{/if}
+		
 	</div>
 </nav>
