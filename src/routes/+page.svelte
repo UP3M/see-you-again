@@ -66,7 +66,7 @@
 					</p>
 				</div>
 				<div class="flex mt-12 space-x-3">
-					<button class="w-1/4 primary"><a href="/Workspace">Start Find Workspace</a></button>
+					<button class="w-1/3 primary"><a href="/Workspace">Start Find Workspace</a></button>
 					<button class="w-1/4 outline bg-black"><a href="mailto:m.wedamerta@innopolis.university">Contact Us</button>
 				</div>
 			</div>
