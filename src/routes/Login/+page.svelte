@@ -9,6 +9,7 @@
 	import { onMount } from 'svelte';
 	import { firebaseConfig } from '$lib/scripts/config.js';
 	import { goto } from '$app/navigation';
+	import authStore from '../stores/authStore';
 
 	let email = '';
 	let password = '';
@@ -21,6 +22,10 @@
 		signInWithEmailAndPassword(auth, email, password)
 			.then((userCredential) => {
 				// Signed in
+				authStore.set({
+					isLoggedIn: userCredential !== null,
+					firebaseController: true
+      })
 				goto('/Create');
 			})
 			.catch((error) => {

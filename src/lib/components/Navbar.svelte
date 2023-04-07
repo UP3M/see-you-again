@@ -1,3 +1,15 @@
+<script lang="ts">
+	import authStore from '../../routes/stores/authStore';
+	let controller: string;
+	authStore.subscribe(async ({ firebaseController }) => {
+		if (firebaseController) {
+			controller = 'Logout';
+		} else {
+			controller = 'Login';
+		}
+	});
+</script>
+
 <nav
 	class="sticky top-0 w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white z-10"
 >
@@ -10,6 +22,6 @@
 				<a href="/About">About</a>
 			</div>
 		</div>
-		<button class="font-bold px-10"><a href="/Login">+</a></button>
+		<button class="font-bold px-10"><a href="/Login">{controller}</a></button>
 	</div>
 </nav>

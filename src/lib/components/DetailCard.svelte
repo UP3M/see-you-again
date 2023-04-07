@@ -1,5 +1,10 @@
 <script lang="ts">
 	import type { Post } from '$lib/models/post';
+  import authStore from '../../routes/stores/authStore';
+	let controller: boolean;
+	authStore.subscribe(async ({ firebaseController }) => {
+		controller = firebaseController
+	});
 
 	export let post_final: Post;
 	export let id: string;
@@ -43,16 +48,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="relative flex flex-col items-end w-1/2 p-4">
+			<div class="relative flex flex-col items-center w-1/2 p-4">
 				<img class="w-100 rounded-lg" src={post_final.cover} alt="" />
+        {#if controller}
+				<a href="/Detail/{id}/Update" class="py-10"
+					><button
+						class="py-4 text-sm font-bold text-white uppercase bg-teal-500 rounded-sm px-14 hover:bg-red-600"
+						>Update</button
+					></a>
+        {/if}
 			</div>
 		</div>
-
-		<a href="/Detail/{id}/Update"
-			><button
-				class="py-4 text-sm font-bold text-white uppercase bg-teal-500 rounded-sm px-14 hover:bg-red-600"
-				>Update</button
-			></a
-		>
 	</main>
 </div>

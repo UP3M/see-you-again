@@ -1,8 +1,12 @@
 <script lang="ts">
-	import { push, ref, set } from 'firebase/database';
+	import { push, ref} from 'firebase/database';
 	import { db } from '$lib/scripts/firestore';
 	import { Post } from '$lib/models/post';
 	import { fade } from 'svelte/transition';
+
+	import { goto } from '$app/navigation';
+	import authStore from '../stores/authStore';
+
 	let hasError = false;
 	let isSuccessVisible = false;
 	let submitted = false;
@@ -20,11 +24,17 @@
 	}
 
 	let post = new Post('', 1, '', '', false, '', null, '');
+
+	authStore.subscribe(async ({ isLoggedIn, firebaseController }) => {
+		if (!isLoggedIn && firebaseController) {
+			await goto('/Login');
+		}
+	});
 </script>
 
 <svelte:head>
 	<title>Create</title>
-    <meta name="description" content="Create a post for workspace"/>
+	<meta name="description" content="Create a post for workspace" />
 	<meta name="robots" content="noindex nofollow" />
 	<html lang="en" />
 </svelte:head>
