@@ -16,7 +16,7 @@
 	<div class="text-center mb-12">
 		<h1 class="text-4xl md:text-6xl text-white-700 font-semibold">Find Your Dream Workspace</h1>
 	</div>
-    {#if $authStore.firebaseController}
+    {#if $authStore.isLoggedIn}
         <button class="py-4 text-sm font-bold text-white uppercase bg-teal-500 rounded-sm px-14 hover:bg-blue-600"><a href="/Create">Add Item</a></button>
     {/if}
 	<CMSList />
