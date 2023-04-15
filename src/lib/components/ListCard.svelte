@@ -5,7 +5,7 @@
 	let id = i.toString();
 </script>
 
-<a href="/Detail/{id}">
+<a href="/Workspace/{id}">
 	<div class="flex flex-wrap m-4 p-2">
 		<div
 			class="h-full border-2 border-gray-400 border-opacity-60 rounded-lg overflow-hidden bg-white"
