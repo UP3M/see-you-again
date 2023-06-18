@@ -1,4 +1,4 @@
-<script lang="ts">
+<script context="module" lang="ts">
 	import DetailUpdate from './DetailUpdate.svelte';
 	import { onMount } from 'svelte';
 	import { onValue, ref } from 'firebase/database';
@@ -7,20 +7,26 @@
 
 	export let id: string;
 	let key: string;
-	var postsN = new Array();
-	var postsKeys = new Array();
-
-	var post_final = new Post('', 0, '', '', false, '', null, '');
-	onMount(() => {
-		onValue(ref(db, '/posts'), (s) => {
-			if (s.exists()) {
+	let postsKeys = new Array();
+	let post_final = new Post('', 0, '', '', false, '', null, '');
+	let postsN = new Array();
+	export async function load() {
+	  await onValue(ref(db, '/posts'), (s) => {
+		if (s.exists()) {
 				postsN = Object.values(s.val());
 				post_final = postsN[parseInt(id)];
 				postsKeys = Object.keys(s.val());
 				key = postsKeys[parseInt(id)];
 			}
-		});
-	});
+	  });
+  
+	  return {
+		props: {
+		  post_final,
+		  key
+		}
+	  };
+	}
 </script>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -28,3 +34,5 @@
 		<DetailUpdate {post_final} {key} />
 	</div>
 </div>
+
+  
