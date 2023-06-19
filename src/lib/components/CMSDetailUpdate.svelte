@@ -1,6 +1,5 @@
 <script context="module" lang="ts">
 	import DetailUpdate from './DetailUpdate.svelte';
-	import { onMount } from 'svelte';
 	import { onValue, ref } from 'firebase/database';
 	import { db } from '$lib/scripts/firestore';
 	import { Post } from '$lib/models/post';
@@ -11,7 +10,7 @@
 	let post_final = new Post('', 0, '', '', false, '', null, '');
 	let postsN = new Array();
 	export async function load() {
-	  await onValue(ref(db, '/posts'), (s) => {
+	  onValue(ref(db, '/posts'), (s) => {
 		if (s.exists()) {
 				postsN = Object.values(s.val());
 				post_final = postsN[parseInt(id)];
