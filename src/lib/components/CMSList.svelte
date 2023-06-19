@@ -4,8 +4,9 @@
 	import { db } from '$lib/scripts/firestore';
 
 	let postss = new Array();
-	export async function load(){
-		await onValue(ref(db, '/posts'), (s) => {
+
+	export function load(){
+		onValue(ref(db, '/posts'), (s) => {
 			if (s.exists()) {
 				postss = Object.values(s.val());
 			}
@@ -14,7 +15,7 @@
 		return {
 			props: {
 				postss
-		}
+			}
 		};
 	}
 </script>
